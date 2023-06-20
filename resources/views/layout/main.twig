@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% endblock %}
+
+</head>
+
+<body>
+	<div id="app" class="">
+		<section class="w-full h-full my-20 flex justify-center">	
+			<div class="flex flex-col lg:flex-row space-x-4 w-4/5">
+				<navbar></navbar>
+				<div class="w-full h-full">
+					{% block content %}		
+					{% endblock %}
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% block scripts %}
+	<script type="module" src="http://localhost:5173/@vite/client"></script>
+	<script type="module" src="http://localhost:5173/main.js"></script>
+{% endblock %}
+</body>
+</html>
