@@ -5,6 +5,5 @@ error_reporting(E_ALL);
 
 require_once 'bootstrap/app.php';
 
-Router::load(['routes/web.php','routes/api.php'])
-             ::direct(Request::uri(),Request::method());
+Router::load(['routes/web.php'])->direct(Request::uri(),Request::method());
 

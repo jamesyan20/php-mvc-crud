@@ -11,8 +11,7 @@
     "php": ">=5.6.4",
     "twig/twig": "^2.11.3",
     "ext-json": "*",
-    "illuminate/database": "^10.13",
-    "coffeecode/uploader": "^2.0"
+    "illuminate/database": "^10.13"
   },
   "autoload": {
     "psr-4": {

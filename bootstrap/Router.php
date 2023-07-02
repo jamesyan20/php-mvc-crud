@@ -23,16 +23,6 @@ class Router {
 		return self::$routes["POST"][ trim($uri,'/') ] = $controller;
 	}
 
-    public static function delete( $uri, $controller ) {
-
-        return self::$routes["DELETE"][ trim($uri,'/') ] = $controller;
-    }
-
-    public static function patch( $uri, $controller ) {
-
-        return self::$routes["PATCH"][ trim($uri,'/') ] = $controller;
-	}
-
     public static function load($files=[] ) {
 	    $instance = new static();
 
@@ -62,12 +52,6 @@ class Router {
 		view("errors/404");
 		return 1;
 	}
-
-    /**
-     * @param $controller
-     * @param $action
-     * @return mixed
-     */
     protected static function map($controller, $action){
 		$controller=(self::$controllerNamespace.$controller);
 
